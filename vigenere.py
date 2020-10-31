@@ -16,4 +16,4 @@ def vigenere(L,A):
         t+=i
     return t
 
-print(vigenere('hello my name is george','qwertyuiopasdfghjklzxcvbnm'))
+# example print(vigenere('Hello, how are you?','qwertyuiopasdfghjklzxcvbnm'))
