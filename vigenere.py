@@ -11,9 +11,23 @@ def vigenere(L,A):
         if i in P:
             text.append(i)
         else:
-            text.append(A[int(alphabet.index(i))])
+            text.append(A[int(alphabet.index(i.lower()))])
     for i in text:
         t+=i
     return t
 
-# example print(vigenere('Hello, how are you?','qwertyuiopasdfghjklzxcvbnm'))
+# example print(vigenere('my vigenere code cipher','qwertyuiopasdfghjklzxcvbnm'))
+def reverse_vigenere(L,A):
+    P = ''' !()-[]{};:'"\,<>./?@#$%^&*_~'''
+    alphabet = 'abcdefghijklmnopqrstuvwxyz'
+    char=list(L.lower())
+    text=[]
+    t=''
+    for i in L:
+        if i in P:
+            text.append(i)
+        else:
+            text.append(alphabet[int(A.index(i.lower()))])
+    for i in text:
+        t+=i
+    return t
